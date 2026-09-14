@@ -29,8 +29,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     setErrorMsg("");
 
     try {
-      // Send form submission to FormSubmit.co API (Delivers directly to Gmail: nayansingh890@gmail.com)
-      const response = await fetch("https://formsubmit.co/ajax/nayansingh890@gmail.com", {
+      // Send form submission to FormSubmit.co API (Delivers directly to Gmail: nayanksingh890@gmail.com)
+      const response = await fetch("https://formsubmit.co/ajax/nayanksingh890@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -99,7 +99,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 Request Sent to Email!
               </h4>
               <p className="text-sm text-[#475569] max-w-sm mx-auto">
-                Thank you, <strong>{formData.name}</strong>. Your consultation request has been sent directly to <strong>nayansingh890@gmail.com</strong>. We will reach out within 24 business hours.
+                Thank you, <strong>{formData.name}</strong>. Your consultation request has been sent directly to <strong>nayanksingh890@gmail.com</strong>. We will reach out within 24 business hours.
               </p>
               <button
                 onClick={() => {
@@ -261,7 +261,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 {loading ? (
                   <span className="flex items-center gap-2">
                     <Loader2 size={18} className="animate-spin" />
-                    <span>Sending to nayansingh890@gmail.com...</span>
+                    <span>Sending to nayanksingh890@gmail.com...</span>
                   </span>
                 ) : (
                   <span>Send Request to Gmail</span>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  /* Color Tokens - Sage, Terracotta, Sand Palette */
+  --sage-900: #1E342B;
+  --sage-800: #2C4A3E;
+  --sage-700: #3B6252;
+  --sage-600: #4B7865;
+  --sage-200: #C2D6CC;
+  --sage-100: #E4EEE8;
+  --sage-50: #F3F7F4;
+
+  --terracotta-700: #A85D3B;
+  --terracotta-600: #C87D55;
+  --terracotta-500: #D98E66;
+  --terracotta-100: #F8ECE6;
+  --terracotta-50: #FDF7F4;
+
+  --sand-900: #2D2A26;
+  --sand-800: #4A4641;
+  --sand-200: #E8E2D9;
+  --sand-100: #F4EFEA;
+  --sand-50: #FAF7F3;
+
+  --slate-900: #0F172A;
+  --slate-800: #1E293B;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748B;
+  --slate-100: #F1F5F9;
+
+  --background: #FAF7F3;
+  --foreground: #1E293B;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--slate-800);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Typography Utilities */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Glassmorphism & Decorative Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 226, 217, 0.6);
+}
+
+.glass-card-dark {
+  background: rgba(30, 52, 43, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(75, 120, 101, 0.3);
+}
+
+.badge-sage {
+  background-color: var(--sage-100);
+  color: var(--sage-900);
+  border: 1px solid rgba(44, 74, 62, 0.15);
+}
+
+.badge-terracotta {
+  background-color: var(--terracotta-100);
+  color: var(--terracotta-700);
+  border: 1px solid rgba(200, 125, 85, 0.2);
+}
+
+/* Custom Buttons */
+.btn-primary {
+  background-color: var(--sage-800);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 14px rgba(44, 74, 62, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--sage-900);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 74, 62, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--terracotta-600);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 14px rgba(200, 125, 85, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--terracotta-700);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 125, 85, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--sage-900);
+  border: 2px solid var(--sage-800);
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 9999px;
+  transition: all 0.25s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-outline:hover {
+  background-color: var(--sage-800);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Section Container Standard */
+.section-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
